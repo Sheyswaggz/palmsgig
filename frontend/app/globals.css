@@ -1,0 +1,42 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: 255, 143, 51;
+  --brand-navy: 0, 16, 70;
+  --brand-gray: 242, 242, 242;
+  --foreground-rgb: 0, 16, 70;
+  --background-start-rgb: 242, 242, 242;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 242, 242, 242;
+    --background-start-rgb: 0, 16, 70;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply font-gilroy text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-gilroy font-bold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

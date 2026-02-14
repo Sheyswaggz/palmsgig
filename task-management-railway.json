@@ -1,7 +1,13 @@
 {
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
   "deploy": {
-    "startCommand": "uvicorn src.task_management.main:app --host 0.0.0.0 --port $PORT",
+    "startCommand": "gunicorn src.task_management.main:app --host 0.0.0.0 --port $PORT --workers 4",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
+    "restartPolicyMaxRetries": 3
   }
 }

@@ -18,7 +18,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # Install poetry
-RUN pip install --no-cache-dir poetry==1.7.1
+RUN pip install --no-cache-dir poetry==2.1.3
 
 # Copy poetry configuration
 COPY pyproject.toml poetry.lock* ./

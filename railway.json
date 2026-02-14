@@ -4,7 +4,7 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "gunicorn src.main:app --host 0.0.0.0 --port $PORT --workers 4",
+    "startCommand": "gunicorn src.main:app -b 0.0.0.0:$PORT",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",

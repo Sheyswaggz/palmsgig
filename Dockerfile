@@ -75,7 +75,5 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
 # Use entrypoint script
-ENTRYPOINT ["/app/scripts/docker-entrypoint.sh"]
-
-# Start application
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "-w", "4", "-b", "0.0.0.0:8000", "src.api_gateway.main:app"]
+# Run database migrations and start the application
+CMD ["sh", "-c", "alembic upgrade head && gunicorn src.api_gateway.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --host 0.0.0.0 --port ${PORT:-8000}"]

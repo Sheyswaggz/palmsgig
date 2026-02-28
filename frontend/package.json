@@ -1,6 +1,7 @@
 {
   "name": "palmsgig-frontend",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,16 +17,18 @@
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20.17.0",
-    "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
-    "eslint-config-prettier": "^9.1.0",
-    "postcss": "^8.4.49",
-    "prettier": "^3.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.0",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.6.0",
-    "@types/eslint__js": "^8.42.3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "eslint": "^9.17.0",
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint-config-next": "15.1.0",
+    "prettier": "^3.4.2"
   }
 }

@@ -1,12 +1,5 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "out",
-  "installCommand": "npm ci",
-  "framework": "nextjs",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "installCommand": "npm install",
+  "framework": "nextjs"
 }
